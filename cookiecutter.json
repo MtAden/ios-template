@@ -1,9 +1,10 @@
 {
-    "project_name": "Project Name",
-    "company_name": "Raizlabs",
+    "project_name": "ProjectName",
+    "company_name": "Mt Aden LLC",
     "bundle_identifier": "com.{{ cookiecutter.company_name | replace(' ', '-') | lower }}.{{ cookiecutter.project_name | replace(' ', '-') | lower }}",
-    "lead_dev": "Your Name",
-    "lead_email": "{{ cookiecutter.lead_dev | replace(' ', '.') | lower }}@raizlabs.com",
+     "todays_date": "date in format mm/dd/yyyy",
+    "lead_dev": "Alok Choudhary",
+    "lead_email": "{{ cookiecutter.lead_dev | replace(' ', '.') | lower }}@yalokchoudahry.com",
     "hockey_key": "Ask a tech lead for the Hockey Key or enter NO",
     "jira_key": "Specify the JIRA projectKey"
 }
