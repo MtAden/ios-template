@@ -97,12 +97,12 @@ if [ "${SKIP_REGENERATION}" == "true" ] ; then
     echo "Dry run complete."
 else
     # Delete files that we don't want to include in the template
-    rm -rf "${EXPANDED}/app/Podfile.lock"
-    rm -rf "${EXPANDED}/app/Pods"
-    rm -rf "${EXPANDED}/app/${EXPANDED}.xcworkspace"
-    rm -rf "${EXPANDED}/app/build"
-    rm -rf "${EXPANDED}/app/fastlane/build"
-    rm -rf "${EXPANDED}/app/fastlane/screenshots"
+    rm -rf "${EXPANDED}/Podfile.lock"
+    rm -rf "${EXPANDED}/Pods"
+    rm -rf "${EXPANDED}/${EXPANDED}.xcworkspace"
+    rm -rf "${EXPANDED}/build"
+    rm -rf "${EXPANDED}/fastlane/build"
+    rm -rf "${EXPANDED}/fastlane/screenshots"
     echo "Template generation complete."
 fi
 
@@ -117,7 +117,7 @@ if [ "${SKIP_TESTS}" == "true" ] ; then
 else    
     echo "Running tests..."
 
-    pushd "$TEST_OUTPUT_DIR/app"
+    pushd "$TEST_OUTPUT_DIR/"
         bundle install
         bundle exec pod install
         bundle exec fastlane test

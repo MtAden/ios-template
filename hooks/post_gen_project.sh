@@ -4,7 +4,6 @@ set -e
 
 git init
 bundle install
-cd app
 bundle exec pod install
 if [[ "{{ cookiecutter.hockey_key }}" =~ .*[nN][oO].* ]]
 then
